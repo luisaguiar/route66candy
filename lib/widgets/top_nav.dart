@@ -1,5 +1,7 @@
+import 'package:route66candy/constants/controllers.dart';
 import 'package:route66candy/constants/style.dart';
 import 'package:route66candy/helpers/responsiveness.dart';
+import 'package:route66candy/routing/routes.dart';
 import 'package:route66candy/widgets/forms/fields/autocomplete_field.dart';
 import 'package:route66candy/widgets/text/custom_text.dart';
 import 'package:route66candy/widgets/user/user_menu.dart';
@@ -47,6 +49,30 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
           weight: FontWeight.bold,
         )),
         Expanded(child: Container()),
+        Container(
+          child: SizedBox(
+            width: 100,
+            height: 30,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30.0),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  primary: candyPink,
+                ),
+                onPressed: () {
+                  navigationController.navigatTo(shopPageRoute);
+                },
+                child: const Text(
+                  'Shop',
+                  style: TextStyle(fontSize: 14, color: Colors.pink),
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 10,
+        ),
         const SizedBox(
           width: 400,
           child: AutocompleteField(),
