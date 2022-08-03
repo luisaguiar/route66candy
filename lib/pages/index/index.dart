@@ -18,6 +18,9 @@ class IndexPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          const SizedBox(
+            height: 20,
+          ),
           const Carousel(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +34,7 @@ class IndexPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       const CustomText(
                         text: 'Flying off the shelf right now!',
