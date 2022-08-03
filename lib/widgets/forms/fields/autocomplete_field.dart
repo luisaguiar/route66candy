@@ -125,9 +125,10 @@ class AutocompleteField extends StatelessWidget {
           ),
         );
       },
-      onSelected: (Product id) {
+      onSelected: (Product selection) {
         // debugPrint('You just selected ${selection.id}');
-        navigationController.navigatTo('$productDetailsPageRoute/$id');
+        navigationController
+            .navigatTo('$productDetailsPageRoute/${selection.id}');
       },
     );
   }
