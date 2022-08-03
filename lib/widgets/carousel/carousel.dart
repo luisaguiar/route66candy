@@ -9,20 +9,23 @@ class Carousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ImageCarousel(
-      carouselItems: [
-        CarouselItem(
-            imagePath:
-                'assets/images/promo/pexels-karolina-grabowska-4016509.jpg',
-            widget: const SignupPromo(),
-            blurImage: true),
-        CarouselItem(
-            imagePath: 'assets/images/promo/pexels-tim-mossholder-942320.jpg',
-            widget: const Text('asd')),
-        CarouselItem(
-          imagePath: 'assets/images/promo/promo1.png',
-        ),
-      ],
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(30.0),
+      child: ImageCarousel(
+        carouselItems: [
+          CarouselItem(
+              imagePath:
+                  'assets/images/promo/pexels-karolina-grabowska-4016509.jpg',
+              widget: const SignupPromo(),
+              blurImage: true),
+          CarouselItem(
+              imagePath: 'assets/images/promo/pexels-tim-mossholder-942320.jpg',
+              widget: const Text('asd')),
+          CarouselItem(
+            imagePath: 'assets/images/promo/promo1.png',
+          ),
+        ],
+      ),
     );
   }
 }
